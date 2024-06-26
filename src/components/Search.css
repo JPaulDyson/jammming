@@ -1,0 +1,20 @@
+input, button{
+    font-size: 20px;
+    padding: 10px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.6);
+    margin: 100px 0;
+}
+
+input{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right:none;
+}
+
+button{
+    color:white;
+    background: darkred;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+

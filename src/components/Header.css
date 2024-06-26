@@ -1,0 +1,14 @@
+header{
+    color: white;
+    background-color: rgba(0,0,0, 0.5);
+    padding: 5px 10px 20px;
+}
+
+h1{
+    font-size: 48px;
+    text-shadow: 4px 4px 0px black;
+}
+
+h1 span{
+    color:red;
+}

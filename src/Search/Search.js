@@ -8,7 +8,7 @@ function Search(){
                 type="text" 
                 placeholder="Search for songs"
             />
-            <button type="submit">Search</button>
+            <button type="submit" id="searchSubmit">Search</button>
         </form>
     );
 }

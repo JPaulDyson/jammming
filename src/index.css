@@ -20,3 +20,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+main{
+  display: flex;
+  padding:40px;
+}
+
+.panel{
+  border: 3px solid rgba(0,0,0, 0.5);
+  width:100%;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+h2{
+  color:white;
+  background-color: rgba(0,0,0, 0.5);
+  text-shadow: 4px 4px 0px black;
+  padding: 5px;
+}
+
+.panelBody{
+  background-color: rgba(0,0,0, 0.2);
+}

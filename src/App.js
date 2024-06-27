@@ -1,8 +1,8 @@
 import './App.css';
-import Header from './components/Header';
-import Playlist from './components/Playlist';
-import Search from './components/Search';
-import SearchResults from './components/SearchResults';
+import Header from './Header/Header';
+import Playlist from './Playlist/Playlist';
+import Search from './Search/Search';
+import SearchResults from './SearchResults/SearchResults';
 
 function App() {
   return (

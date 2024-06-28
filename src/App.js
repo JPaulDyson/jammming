@@ -37,6 +37,42 @@ const tracks = [
   }
 ];
 
+const playlist = {
+  name: "My Current Songs",
+  tracks: [
+    {
+      name: "Bohemian Rhapsody",
+      artist: "Queen",
+      album: "Night At The Opera",
+      id: 20001
+    },
+    {
+      name: "The Kids Aren't Alright",
+      artist: "The Offspring",
+      album: "Americana",
+      id: 20002
+    },
+    {
+      name: "Low Man's Lyric",
+      artist: "Metallica",
+      album: "Reload",
+      id: 20003
+    },
+    {
+      name: "Until It Sleeps",
+      artist: "Metallica",
+      album: "Load",
+      id: 20004
+    },
+    {
+      name: "Victory",
+      artist: "Megadeth",
+      album: "Youthanasia",
+      id: 20005
+    }
+  ]
+};
+
 function App() {
   return (
     <div className="App">
@@ -44,7 +80,7 @@ function App() {
       <Search />
       <main>
         <SearchResults tracks={tracks} />
-        <Playlist />
+        <Playlist playlist={playlist} />
       </main>
     </div>
   );

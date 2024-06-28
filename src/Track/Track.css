@@ -1,0 +1,21 @@
+.track{
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    margin:10px 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px orange;
+    text-align: left;
+}
+
+.track h4{
+    font-weight: lighter;
+}
+
+.artist{
+    color: orange;
+}
+
+.album{
+    font-style:italic;
+}

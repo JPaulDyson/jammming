@@ -1,0 +1,19 @@
+.trackDetails{
+    flex-grow: 1;
+}
+
+.trackAction{
+    font-size: 48px;
+    text-align: center;
+    width: 45px;
+    height:45px;
+    line-height: 35px;
+    border-radius: 25px;
+    border: 1px solid gray;
+    cursor: pointer;
+    padding-left:1px;
+}
+
+.trackAction:hover{
+    background-color:rgba(125,125,125,0.5);
+}

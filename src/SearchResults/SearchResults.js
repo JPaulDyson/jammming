@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Tracklist from '../Tracklist/Tracklist';
 
 function SearchResults(props){
-    const { tracks } = props;
-    const [searchTracks, setSearchTracks] = useState(tracks);
+    const { tracks, addToPlaylist } = props;
     return(
         <div id="results" className="panel">
             <h2>Results</h2>
             <div className="panelBody">
-                <Tracklist tracks={tracks} />
+                <Tracklist tracks={tracks} panel="results" addToPlaylist={addToPlaylist} />
             </div>
         </div>
     );

@@ -1,8 +1,7 @@
 import './App.css';
 import Header from './Header/Header';
-import Playlist from './Playlist/Playlist';
 import Search from './Search/Search';
-import SearchResults from './SearchResults/SearchResults';
+import Panels from './Panels/Panels';
 
 const tracks = [
   {
@@ -79,8 +78,7 @@ function App() {
       <Header />
       <Search />
       <main>
-        <SearchResults tracks={tracks} />
-        <Playlist playlist={playlist} />
+        <Panels tracks={tracks} playlist={playlist} />
       </main>
     </div>
   );

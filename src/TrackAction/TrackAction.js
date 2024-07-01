@@ -2,17 +2,16 @@ import React from "react";
 import './TrackAction.css';
 
 function TrackAction(props){
-    const { track, panel, addToPlaylist } = props;
+    const { track, panel, trackAction } = props;
+    const trackActionClass = panel === "results" ? "trackAction add" : "trackAction remove"; 
 
     function handleClick(e){
-        addToPlaylist(track);
+        trackAction(track);
     }
 
-    if(panel === "results"){
-        return(
-            <div className="trackAction" track={track} onClick={handleClick}>+</div>
-        );
-    }
+    return(
+        <div className={trackActionClass} track={track} onClick={handleClick}>{panel === "results" ? "+":"x"}</div>
+    );
 }
 
 export default TrackAction;

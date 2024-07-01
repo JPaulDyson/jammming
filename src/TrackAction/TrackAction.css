@@ -17,3 +17,8 @@
 .trackAction:hover{
     background-color:rgba(125,125,125,0.5);
 }
+
+.trackAction.remove{
+    font-size: 36px;
+    padding-left:0;
+}

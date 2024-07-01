@@ -9,7 +9,6 @@ function Panels(props){
     const [playlistTracks, setPlaylistTracks] = useState(playlist.tracks);
 
     function addToPlaylist(track){
-
         //Check if trackId is already present in the playlist, and if so, return an error
         const trackId = Number(track.id);
         if(playlistTracks.some(playlistTrack => playlistTrack.id === trackId)){
@@ -20,10 +19,22 @@ function Panels(props){
         }
     }
 
+    function removeFromPlaylist(track){
+        //Check if trackId is already present in the playlist, and if not, return an error
+        const trackId = Number(track.id);
+        if(playlistTracks.some(playlistTrack => playlistTrack.id === trackId)){
+            //Remove track from playlist
+            const updatedPlaylist = playlistTracks.filter(playlistTrack => playlistTrack.id !== track.id);
+            setPlaylistTracks(updatedPlaylist);
+        }else{
+            alert("Error: The selected song is not in the playlist.");
+        }        
+    }
+
     return(
         <>
-            <SearchResults tracks={tracks} addToPlaylist={addToPlaylist} />
-            <Playlist playlistName={playlistName} playlistTracks={playlistTracks} />
+            <SearchResults tracks={tracks} trackAction={addToPlaylist} />
+            <Playlist playlistName={playlistName} playlistTracks={playlistTracks} trackAction={removeFromPlaylist}/>
         </>
     );
 

@@ -3,7 +3,7 @@ import './Track.css';
 import TrackAction from '../TrackAction/TrackAction';
 
 function Track(props){
-    const { track, panel, addToPlaylist } = props;
+    const { track, panel, trackAction } = props;
 
     return(
         <div className="track">
@@ -14,7 +14,7 @@ function Track(props){
                     <span className="album">{track.album}</span>
                 </h4>
             </div>
-            <TrackAction track={track} panel={panel} addToPlaylist={addToPlaylist} />
+            <TrackAction track={track} panel={panel} trackAction={trackAction} />
         </div>
     );
 }

@@ -8,6 +8,10 @@ function Panels(props){
     const [playlistName, setPlaylistName] = useState(playlist.name);
     const [playlistTracks, setPlaylistTracks] = useState(playlist.tracks);
 
+    function updatePlaylistName(newName){
+        setPlaylistName(newName);
+    }
+
     function addToPlaylist(track){
         //Check if trackId is already present in the playlist, and if so, return an error
         const trackId = Number(track.id);
@@ -34,7 +38,7 @@ function Panels(props){
     return(
         <>
             <SearchResults tracks={tracks} trackAction={addToPlaylist} />
-            <Playlist playlistName={playlistName} playlistTracks={playlistTracks} trackAction={removeFromPlaylist}/>
+            <Playlist playlistName={playlistName} updatePlaylistName={updatePlaylistName} playlistTracks={playlistTracks} trackAction={removeFromPlaylist}/>
         </>
     );
 

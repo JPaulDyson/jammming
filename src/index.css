@@ -58,6 +58,7 @@ h2{
   background-color: rgba(0,0,0, 0.7);
   text-shadow: 4px 4px 0px black;
   padding: 5px 5px 10px;
+  font-size:24px;
 }
 
 .panelBody{

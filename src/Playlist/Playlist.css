@@ -1,0 +1,15 @@
+#playlistName{
+    color:white;
+    background:none;
+    border: none;
+    box-shadow: none;
+    margin:0 20px;
+    padding:0;
+    width:calc(100% - 40px);
+    text-align:center;
+    font-weight:bold;
+    text-shadow: 4px 4px 0px black;
+    font-size:24px;
+    cursor: pointer;
+    border-radius: 8px;
+}

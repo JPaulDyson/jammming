@@ -1,7 +1,9 @@
+import React from 'react';
 import './App.css';
 import Header from './Header/Header';
 import Search from './Search/Search';
 import Panels from './Panels/Panels';
+import GetAccessToken from './Spotify/GetAccessToken';
 
 const tracks = [
   {
@@ -83,6 +85,9 @@ const playlist = {
 };
 
 function App() {
+
+  GetAccessToken();
+
   return (
     <div className="App">
       <Header />

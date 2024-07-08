@@ -1,26 +1,29 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import './Search.css';
 
 function Search(props){
-    const [term, setTerm] = useState("");
+    
+    const {submitSearch} = props;
+    const [searchTerm, setSearchTerm] = useState("");
 
-    const handleTermChange = useCallback((event) => {
-        setTerm(event.target.value);
-    }, []);  
-    
-    const search = useCallback(() => {
-        props.onSearch(term);
-    }, [props.onSearch, term]);
-    
+    function handleChange(e){
+        setSearchTerm(e.currentTarget.value);
+    }
+
+    function handleSubmit(e){
+        e.preventDefault();
+        submitSearch(searchTerm);
+    }
 
     return(
-        <form>
+        <form onSubmit={handleSubmit}>
             <input 
                 type="text" 
                 placeholder="Search for songs"
-                onChange={handleTermChange}
+                value={searchTerm}
+                onChange={handleChange}
             />
-            <button id="searchSubmit" onClick={search}>Search</button>
+            <button id="searchSubmit">Search</button>
         </form>
     );
 }

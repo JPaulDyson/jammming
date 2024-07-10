@@ -1,10 +1,12 @@
+import GetUserId from "./GetUserId";
+
 const clientId = '31211e09ad1a4c6b90a0b2edf32b812f'; // Insert client ID here.
 const redirectUri = 'http://localhost:3000/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
 
 function GetAccessToken(){
 
     function spotifyLogin(){
-        const scope = 'user-read-private user-read-email'; // Specify required scopes
+        const scope = 'user-read-private user-read-email playlist-modify-private'; // Specify required scopes
 
         // Function to generate a random state string
         function generateRandomString(length) {
@@ -99,6 +101,13 @@ function GetAccessToken(){
         console.log(localStorage.getItem("access_token_expiry"));
 
     }
+
+    //if user ID is not yet in localStorage, get it and set it:
+    if(localStorage.getItem("user_id") === null){
+        GetUserId();
+    }
+
+    console.log(localStorage.getItem("user_id"));
 
 }
 

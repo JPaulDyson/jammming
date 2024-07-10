@@ -54,7 +54,7 @@ function Panels(props){
 
     function addToPlaylist(track){
         //check if there are already tracks in the playlist
-        const duplicate = false;
+        let duplicate = false;
 
         if(playlistTracks){
             //Check if trackId is already present in the playlist, and if so, return an error

@@ -70,6 +70,7 @@ function GetAccessToken(){
         // clear existing values from localStorage:
         localStorage.removeItem("access_token");
         localStorage.removeItem("access_token_expiry");
+        localStorage.removeItem("user_id");
         //Send user back to login
         spotifyLogin();
     }
@@ -97,17 +98,10 @@ function GetAccessToken(){
 
     }else{
 
-        console.log(localStorage.getItem("access_token"));
-        console.log(localStorage.getItem("access_token_expiry"));
-
-    }
-
-    //if user ID is not yet in localStorage, get it and set it:
-    if(localStorage.getItem("user_id") === null){
+        // console.log(localStorage.getItem("access_token"));
+        // console.log(localStorage.getItem("access_token_expiry"));
         GetUserId();
     }
-
-    console.log(localStorage.getItem("user_id"));
 
 }
 

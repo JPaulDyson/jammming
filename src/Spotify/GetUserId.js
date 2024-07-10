@@ -13,6 +13,7 @@ function GetUserId(){
     .then(data => {
         const userId = data.id;
         localStorage.setItem("user_id", userId);
+        //console.log("User ID: " + localStorage.getItem("user_id"));
     })
     .catch(error => {
         console.log('Error fetching user data:', error);

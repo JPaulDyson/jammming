@@ -88,7 +88,7 @@ function Playlist(props){
         
               if (response.ok) {
                 const data = await response.json();
-                console.log('Playlist created:', data);
+                //console.log('Playlist created:', data);
                 addTracks(data.id);
               } else {
                 console.error('Error creating playlist:', response.statusText);

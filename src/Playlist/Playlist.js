@@ -47,15 +47,29 @@ function Playlist(props){
               );
         
               if (response.ok) {
-                alert(`Your "${playlistName}" playlist has been successfully created!`);
+                //hide saving message:
+                document.getElementById("loadingIconContainer").style.display="none";
+
+                //display success message:
+                document.getElementById("saveSuccess").style.display="block";
+                //alert(`Your "${playlistName}" playlist has been successfully created!`);
+                
                 //clear playlist:
                 setPlaylistTracks("");
                 updatePlaylistName("");
                 updatePlaylistDesc("");
               } else {
+                //hide saving message:
+                document.getElementById("loadingIconContainer").style.display="none";
+                //display fail message:
+                document.getElementById("saveFail").style.display="block";
                 console.error('Error adding tracks:', response.statusText);
               }
             } catch (error) {
+              //hide saving message:
+              document.getElementById("loadingIconContainer").style.display="none";
+              //display fail message:
+              document.getElementById("saveFail").style.display="block";
               console.error('An error occurred:', error);
             }
         };
@@ -100,6 +114,9 @@ function Playlist(props){
 
         if(accessToken !== null && userId !== null){
             if(playlistName){
+                //show loading screen
+                document.getElementById("loadingScreen").style.display = "flex";
+                //Create playlist
                 createPlaylist();
             }else{
                 alert("Please enter a name for your playlist.");

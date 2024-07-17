@@ -14,7 +14,7 @@ function LoadingScreen(){
 
         <div id="loadingScreen">
             <div id="loadingIconContainer">
-                <img src={loadingIcon} />
+                <img src={loadingIcon} alt="Loading" />
                 <p id="savingMsg">Saving your playlist...</p>
             </div>
             <div className="loadingModal" id="saveSuccess">

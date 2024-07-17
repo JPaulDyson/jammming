@@ -1,7 +1,8 @@
 import GetUserId from "./GetUserId";
 
 const clientId = '31211e09ad1a4c6b90a0b2edf32b812f'; // Insert client ID here.
-const redirectUri = 'http://localhost:3000/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
+const redirectUri = 'https://jammming-jpd.netlify.app/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
+//const redirectUri = 'http://localhost:3000/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
 //const redirectUri = 'https://pauldyson.io/jammming'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
 
 function GetAccessToken(){
